@@ -1,0 +1,18 @@
+# looks same as replica set
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-kube-replicaset
+spec:
+  selector:
+    matchLabels:
+      app: test-kube
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: test-kube
+    spec:
+      containers:
+      - name: test-kube
+        image: malla/test-kube:latest      
