@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: test-kube
+      app: test-micro
   replicas: 2
   template:
     metadata:
@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: test-micro
-        image: malla/test-microe:latest
+        image: malla/test-micro:latest
