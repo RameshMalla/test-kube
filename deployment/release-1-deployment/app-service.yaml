@@ -2,14 +2,14 @@ kind: Service
 apiVersion: v1
 metadata:
   # Unique key of the Service instance
-  name: test-kube-service
+  name: test-micro-service
 spec:
   ports:
     - name: http
       port: 8080
-      nodePort: 30001
+      nodePort: 30002
       # this is optional if pods are running on port 8080
       targetPort: 8080
   selector:
-    app: test-kube
+    app: test-micro
   type: NodePort

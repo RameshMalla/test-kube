@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-kube-replicaset
+  name: test-micro
 spec:
   selector:
     matchLabels:
@@ -11,8 +11,8 @@ spec:
   template:
     metadata:
       labels:
-        app: test-kube
+        app: test-micro
     spec:
       containers:
-      - name: test-kube
-        image: malla/test-kube:latest      
+      - name: test-micro
+        image: malla/test-microe:latest
